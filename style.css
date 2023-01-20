@@ -1,0 +1,21 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) repeat(1, 6fr);
+    grid-template-rows: repeat(1, 1fr) repeat(1, 3fr);
+    grid-template-areas: 
+                         "dashboard nav"
+                         "dashboard projects";
+}
+.dashboard{
+    background-color: blue;
+    color: white;
+    grid-area: dashboard;
+}
+.nav{
+    background-color: brown;
+    grid-area: nav;
+}
+.projects{
+    background-color: yellow;
+    grid-area: projects;
+}
