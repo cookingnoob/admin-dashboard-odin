@@ -22,9 +22,28 @@
 
 /*navigation board begins*/
 .nav{
-    background-color: brown;
+    background-color: white;
     grid-area: nav;
+    display: grid;
+    grid-template-columns: repeat(1, 2fr) repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr) repeat(1, 2fr);
+    grid-template-areas: 
+                        "search settings"
+                        "welcome post";
 }
+.searchBar{
+    grid-area: search;
+}
+.welcomeMsg{
+    grid-area: welcome;
+}
+.settings{
+    grid-area: settings;
+}
+.post{
+    grid-area: post;
+}
+
 /*navigation board ends*/
 
 /*content board begins*/
