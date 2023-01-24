@@ -1,28 +1,15 @@
 .container{
     display: grid;
-    grid-template-columns: repeat(1, 1fr) repeat(1, 6fr);
-    grid-template-rows: repeat(1, 1fr) repeat(1, 3fr);
+    grid-template-columns: repeat(1, 20%) repeat(1, 80%);
+    grid-template-rows: repeat(1, 1fr) repeat(1, 5fr);
     grid-template-areas: 
                          "dashboard nav"
                          "dashboard content";
 }
-/*dashboard begins*/
-.dashboard{
-    background-color: blue;
-    color: white;
-    grid-area: dashboard;
-}
-.dashTopContainer{
-
-}
-.dashBotomContainer{
-    
-}
-/*dashboard ends*/
-
 /*navigation board begins*/
 .nav{
     background-color: white;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
     grid-area: nav;
     display: grid;
     grid-template-columns: repeat(1, 2fr) repeat(1, 1fr);
@@ -43,16 +30,49 @@
 .post{
     grid-area: post;
 }
-
+.postBtn{
+    color: white;
+    background-color:rgb(34, 156, 255);
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    width: 80px;
+}
 /*navigation board ends*/
+
+/*dashboard begins*/
+.dashboard{
+    background-color: rgb(34, 156, 255);
+    color: white;
+    grid-area: dashboard;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+.dashboard svg{
+    fill: white;
+    height: 30px;
+}
+.dashTopContainer{
+    display: grid;
+    
+}
+.dashBotomContainer{
+    display: grid;
+}
+.section{
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/*dashboard ends*/
 
 /*content board begins*/
 .content{
-    background-color: rgb(187, 186, 186);
+    background-color: rgb(223, 232, 238);
     grid-area: content;
     display: grid;
-    grid-template-columns: repeat(1, 4fr) repeat(1, 1fr);
-    grid-template-rows: repeat(1, 1fr) repeat(1, 4fr) repeat(1, 1fr) repeat(1, 4fr);
+    grid-template-columns: repeat(1, 67%) repeat(1, 33%);
+    grid-template-rows: repeat(1, 1fr) repeat(1, 4fr) repeat(1, 1fr) repeat(1, 4fr) repeat(1, 1fr);
     grid-template-areas: 
                         "contentTitle annTitle"
                         "articles announcements"
@@ -67,32 +87,61 @@
 }
 .articles{
     grid-area: articles;
+    margin-left: 30px;
+    margin-right: 30px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    grid-template-columns: repeat(2, 2fr);
     grid-template-rows: repeat(3, 1fr);
+}
+.articles p{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: gray;
+    
+}
+.cards svg{
+    fill: gray;
+    height: 20px;
 }
 .cards{
     background-color: white;
     border-left: 5px solid orange ;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
     border-radius: 5px;
-    height: 200px;
+    height: 230px;
+    
 }
 .announcements{
     background-color: white;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
     border-radius: 5px;
+    margin-right: 20px;
     grid-area: announcements;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
-.newsCard{
- 
+.announcements p{
+    font-family: sans-serif;
+    
+    font-size: 10px;
+    color: gray;
+}
+.news{
+
 }
 .tTitle{
     grid-area: trendTitle;
 }
 .trend{
-    background-color: aliceblue;
+    background-color: white;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+    margin-right: 20px;
     border-radius: 5px;
     grid-area: trend;
+}
+.user img{
+    height: 80px;
 }
 /*content board end*/
