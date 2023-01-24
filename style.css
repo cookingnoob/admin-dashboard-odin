@@ -23,6 +23,21 @@
 }
 .welcomeMsg{
     grid-area: welcome;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "imgB hi"
+                         "imgB username";
+}
+.bigImg{
+    height: 7rem;
+    grid-area: imgB;
+}
+.welcomeMsg h3{
+    grid-area: username;
+}
+.welcomeMsg p{
+    grid-area: hi;
 }
 .settings{
     grid-area: settings;
@@ -37,6 +52,10 @@
     border-radius: 30px;
     padding: 10px;
     width: 80px;
+}
+
+.smallImg{
+    height: 3rem;
 }
 /*navigation board ends*/
 
@@ -141,7 +160,27 @@
     border-radius: 5px;
     grid-area: trend;
 }
+.user{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "img username"
+                         "img description";
+}
+.username{
+    font-size: 12px;
+    grid-area: username;
+    align-self: end;
+}
+.description{
+    grid-area: description;
+    font-size: 14px;
+}
 .user img{
-    height: 80px;
+    height: 4rem;
+    grid-area: img;
+    display: grid;
+    align-self: center;
+    justify-self: center;
 }
 /*content board end*/
